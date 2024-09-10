@@ -14,7 +14,7 @@ This project simulates a simplified Trading System based on the concepts used in
 *   **Diagnostics:** Supports replaying events for debugging and business diagnostics.  
      
     
-    ### Getting Started
+### Getting Started
     
     ####  Prerequisites
     
