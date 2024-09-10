@@ -16,7 +16,8 @@ This project simulates a simplified Trading System based on the concepts used in
     
 ### Getting Started
     
-    ####  Prerequisites
+ ####  Prerequisites
+
     
       
     .NET 6.0 or higher  
