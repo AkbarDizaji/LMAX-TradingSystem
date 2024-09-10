@@ -5,6 +5,10 @@
   
 This project simulates a simplified Trading System based on the concepts used in the `**LMAX Disruptor**` pattern. The system processes `OrderPlacedEvent` and applies Business Logic to simulate trades. It leverages `Event Sourcing` to store events for replay in case of a failure and implements a Failover Mechanism to recover from crashes by switching between multiple processors.
 
+For more information about concept , read this article:
+
+[https://martinfowler.com/articles/lmax.html](https://martinfowler.com/articles/lmax.html)  
+
 ### Key Features
 
 *   **Disruptor Pattern:** Uses a ring buffer pattern to process high-throughput events efficiently.
