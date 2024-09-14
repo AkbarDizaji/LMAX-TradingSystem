@@ -1,3 +1,6 @@
+[![CI Status](https://github.com/AkbarDizaji/LMAX-TradingSystem/actions/workflows/main.yml/badge.svg)](https://github.com/AkbarDizaji/LMAX-TradingSystem/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/AkbarDizaji/LMAX-TradingSystem.svg?style=social&label=Star&maxAge=2592000)](https://github.com/AkbarDizaji/LMAX-TradingSystem/stargazers/)
 ##  LMAX-TradingSystem
 
 ###  Overview
