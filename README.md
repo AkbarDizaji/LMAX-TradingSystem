@@ -16,7 +16,7 @@ For more information about concept , read this article:
 
 [https://martinfowler.com/articles/lmax.html](https://martinfowler.com/articles/lmax.html)  
 
-### Key Features
+## Key Features
 
 *   **Disruptor Pattern:** Uses a ring buffer pattern to process high-throughput events efficiently.
 *   **Event Sourcing:** Stores every event, enabling the system to rebuild its state by replaying past events.
