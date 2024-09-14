@@ -25,7 +25,7 @@ For more information about concept , read this article:
 *   **Diagnostics:** Supports replaying events for debugging and business diagnostics.  
      
     
-### Getting Started
+## Getting Started
     
  ####  Prerequisites
 
@@ -36,7 +36,7 @@ For more information about concept , read this article:
     NuGet package Disruptor-net
     
 
-###  How It Works
+##  How It Works
 
 ####  Event Sourcing
 
@@ -63,5 +63,5 @@ Snapshots are used to restore the system’s state quickly after a crash.
 This class manages multiple instances of BusinessLogicProcessor. If the primary processor crashes, the system fails over to a backup processor, which restores the state from the last snapshot and replays the events that occurred after the snapshot.
 
 
-#### Support
+## Support
 You can support this repository by your star ⭐
