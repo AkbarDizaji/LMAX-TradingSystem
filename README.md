@@ -61,3 +61,7 @@ Snapshots are used to restore the system’s state quickly after a crash.
 **ReplicatedProcessor:**
 
 This class manages multiple instances of BusinessLogicProcessor. If the primary processor crashes, the system fails over to a backup processor, which restores the state from the last snapshot and replays the events that occurred after the snapshot.
+
+
+#### Support
+You can support this repository by your star ⭐
