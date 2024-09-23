@@ -1,5 +1,6 @@
 [![Powered by Laravel](https://img.shields.io/badge/Powered%20by-Laravel-red?style=flat&logo=laravel)](https://laravel.com)
 [![Powered by .NET](https://img.shields.io/badge/Powered%20by-.NET-512BD4?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
+[![Powered by PHP](https://img.shields.io/badge/Powered%20by-PHP-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net/)
 [![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![LMAX Architecture](https://img.shields.io/badge/Architecture-LMAX-blue?style=flat)](https://martinfowler.com/articles/lmax.html)
 [![High Performance](https://img.shields.io/badge/High-Performance-orange?style=flat)](https://github.com/yourusername/yourrepo)
