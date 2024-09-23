@@ -1,10 +1,11 @@
 [![Powered by .NET](https://img.shields.io/badge/Powered%20by-.NET-512BD4?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
-[![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![LMAX Architecture](https://img.shields.io/badge/Architecture-LMAX-blue?style=flat)](https://martinfowler.com/articles/lmax.html)
 [![High Performance](https://img.shields.io/badge/High-Performance-orange?style=flat)](https://github.com/yourusername/yourrepo)
 [![Asynchronous](https://img.shields.io/badge/Asynchronous-Programming-brightgreen?style=flat)](https://github.com/yourusername/yourrepo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/AkbarDizaji/LMAX-TradingSystem.svg?style=social&label=Star&maxAge=2592000)](https://github.com/AkbarDizaji/LMAX-TradingSystem/stargazers/)
+
+
 ##  LMAX-TradingSystem
 
 ###  Overview
