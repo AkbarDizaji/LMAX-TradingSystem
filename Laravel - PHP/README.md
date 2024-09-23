@@ -1,3 +1,11 @@
+[![Powered by Laravel](https://img.shields.io/badge/Powered%20by-Laravel-red?style=flat&logo=laravel)](https://laravel.com)
+[![Powered by PHP](https://img.shields.io/badge/Powered%20by-PHP-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net/)
+[![LMAX Architecture](https://img.shields.io/badge/Architecture-LMAX-blue?style=flat)](https://martinfowler.com/articles/lmax.html)
+[![High Performance](https://img.shields.io/badge/High-Performance-orange?style=flat)](https://github.com/yourusername/yourrepo)
+[![Asynchronous](https://img.shields.io/badge/Asynchronous-Programming-brightgreen?style=flat)](https://github.com/yourusername/yourrepo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/AkbarDizaji/LMAX-TradingSystem.svg?style=social&label=Star&maxAge=2592000)](https://github.com/AkbarDizaji/LMAX-TradingSystem/stargazers/)
+
 # LMAX Architecture-Inspired Trading System in Laravel
 
 This project is a small trading sample built in Laravel, inspired by the LMAX Disruptor architecture. The system simulates the core principles of LMAX such as event sourcing, in-memory processing, and disruptors, adapted to Laravels environment.
