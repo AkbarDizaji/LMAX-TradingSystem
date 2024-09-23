@@ -1,3 +1,4 @@
+[![Powered by Laravel](https://img.shields.io/badge/Powered%20by-Laravel-red?style=flat&logo=laravel)](https://laravel.com)
 [![Powered by .NET](https://img.shields.io/badge/Powered%20by-.NET-512BD4?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![LMAX Architecture](https://img.shields.io/badge/Architecture-LMAX-blue?style=flat)](https://martinfowler.com/articles/lmax.html)
