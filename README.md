@@ -1,6 +1,4 @@
-[![Powered by Laravel](https://img.shields.io/badge/Powered%20by-Laravel-red?style=flat&logo=laravel)](https://laravel.com)
 [![Powered by .NET](https://img.shields.io/badge/Powered%20by-.NET-512BD4?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
-[![Powered by PHP](https://img.shields.io/badge/Powered%20by-PHP-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net/)
 [![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![LMAX Architecture](https://img.shields.io/badge/Architecture-LMAX-blue?style=flat)](https://martinfowler.com/articles/lmax.html)
 [![High Performance](https://img.shields.io/badge/High-Performance-orange?style=flat)](https://github.com/yourusername/yourrepo)
@@ -8,66 +6,82 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/AkbarDizaji/LMAX-TradingSystem.svg?style=social&label=Star&maxAge=2592000)](https://github.com/AkbarDizaji/LMAX-TradingSystem/stargazers/)
 
-# LMAX Trading System
+## LMAX-TradingSystem
 
-This project provides a multi-language implementation of the LMAX Disruptor architecture for building high-performance trading platforms. The LMAX architecture is a low-latency, high-throughput system designed for handling millions of trades per second. It is an in-memory, event-sourced system using a pattern known as Disruptor to achieve high concurrency without the need for traditional locks.
-## Implemented Languages
-**PHP (Laravel): **Full implementation of LMAX architecture.
-**C# (.NET): **Full implementation of LMAX architecture.
-## Overview of LMAX Architecture
-LMAX is a highly efficient architecture, designed to process a high volume of transactions in financial trading systems. The core components include:
+### Overview
 
-- **In-memory Business Logic Processor:** Handles all business logic in a single-threaded manner for simplicity and speed.
-- **Disruptor Pattern: **A high-performance concurrency framework that replaces traditional queues with a lock-free ring buffer.
-- **Event Sourcing:** All changes are captured as a series of events, making the system resilient to failures by replaying events from a durable store.
-## Features
-- **In-memory processing:** All transactions are processed in memory, reducing I/O overhead and increasing speed.
-- **Event Sourcing:** Ensures system state can always be rebuilt by replaying events.
-- **Concurrency:** Utilizes the Disruptor pattern to handle concurrent tasks without the need for locks.
-- **Multi-language support:** Current implementations in:
-	- PHP (Laravel)
-	- C# (.NET)
+This project simulates a simplified Trading System based on the concepts used in the `**LMAX Disruptor**` pattern. The system processes `OrderPlacedEvent` and applies Business Logic to simulate trades. It leverages `Event Sourcing` to store events for replay in case of a failure and implements a Failover Mechanism to recover from crashes by switching between multiple processors.
 
-## Project Structure
-**/Laravel-PHP**: Contains the LMAX implementation using the Laravel framework in PHP.
-**/.NET-C#**: Contains the LMAX implementation using .NET in C#.
+For more information about the concept, read this article:
 
-Each language folder contains its own implementation, including the core architecture and a sample application demonstrating how LMAX can be used for handling high-frequency transactions.
+[https://martinfowler.com/articles/lmax.html](https://martinfowler.com/articles/lmax.html)
 
-## How to Use
-### PHP (Laravel) Setup
+## Key Features
+
+*   **Disruptor Pattern:** Uses a ring buffer pattern to process high-throughput events efficiently.
+*   **Event Sourcing:** Stores every event, enabling the system to rebuild its state by replaying past events.
+*   **Snapshotting:** Periodically takes a snapshot of the processor's state to speed up recovery.
+*   **Failover Mechanism:** Simulates failover between multiple processors, allowing continued operation in the event of a crash.
+*   **Diagnostics:** Supports replaying events for debugging and business diagnostics.
+
+## Getting Started
+
+#### Prerequisites
+
+*   .NET 8.0 or higher
+*   Visual Studio or any C# IDE
+*   NuGet package [Disruptor](https://www.nuget.org/packages/Disruptor) (restored automatically via `dotnet restore`)
+
+#### Setup
+
 1. Clone the repository.
-2. Navigate to the /Laravel-PHP
-3. Install the dependencies:
+2. Restore the dependencies:
 
-```shell
-composer install
-```    
-
-4.Configure your .env file.
-5.Run the migrations:
-php artisan migrate
-```shell
-php artisan migrate
-```
-6.Run the application:
-```shell
-php artisan serve
-```
-
-### C# (.NET) Setup
-1. Clone the repository.
-2. Navigate to the csharp-dotnet/ directory.
-3. Restore the dependencies:
 ```shell
 dotnet restore
 ```
 
-4.Build and run the application:
+3. Build and run the application:
 
 ```shell
-dotnet run
+dotnet run --project LMAX-TradingSystem
 ```
 
-## ContributingContributing
-If you’d like to contribute to this project, please feel free to submit a pull request or open an issue.
+## How It Works
+
+#### Event Sourcing
+
+**OrderPlacedEvent**: Represents a customer placing an order (e.g., stock purchase).
+**EventStore**: Stores these events in a list (or a persistent store) to allow replaying events in case of failure. Each event has a Timestamp indicating when it was created.
+
+#### Business Logic Processor
+
+The BusinessLogicProcessor processes the OrderPlacedEvent to generate a TradeExecutedEvent. Each processed event is stored in the EventStore for future replay and is also used to update the system state, which can later be saved in a snapshot.
+
+#### Snapshots
+
+The system periodically takes snapshots of the current state (e.g., account balances).
+Snapshots are used to restore the system's state quickly after a crash.
+
+#### Failover Mechanism
+
+**ReplicatedProcessor:**
+
+This class manages multiple instances of BusinessLogicProcessor. If the primary processor crashes, the system fails over to a backup processor, which restores the state from the last snapshot and replays the events that occurred after the snapshot.
+
+## Project Structure
+
+*   **LMAX-TradingSystem/BusinessLogic**: Core business logic processing.
+*   **LMAX-TradingSystem/Domain**: Domain events (e.g., `OrderPlacedEvent`).
+*   **LMAX-TradingSystem/EventSourcing**: Event store and snapshotting.
+*   **LMAX-TradingSystem/Failover**: Replicated processor / failover handling.
+*   **LMAX-TradingSystem/Diagnostics**: Diagnostic event replay.
+*   **LMAX-TradingSystem/DisruptorSetup**: Disruptor ring buffer configuration.
+
+## Contributing
+
+If you'd like to contribute to this project, please feel free to submit a pull request or open an issue.
+
+## Support
+
+You can support this repository by your star ⭐
