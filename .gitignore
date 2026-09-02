@@ -364,3 +364,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Environment files / local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
